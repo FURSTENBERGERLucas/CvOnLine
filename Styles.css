@@ -1,33 +1,303 @@
-body {
+/* Global styles */
+* {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    margin: 0;
+    text-align: justify;
+    box-sizing: border-box;
 }
-    
+
+body {
+    background: #000;
+    color: #000000;
+    line-height: 1.6;
+}
+
+@keyframes briller {
+    0% {
+        color: #ff0000; /* Rouge */
+    }
+    25% {
+        color: #ff9900; /* Orange */
+    }
+    50% {
+        color: #33cc33; /* Vert */
+    }
+    75% {
+        color: #3399ff; /* Bleu */
+    }
+    100% {
+        color: #ff33cc; /* Rose */
+    }
+}
+
+/* HEADER */
 header {
-    background: #333;
-    color: #fff;
+    background: #00ff04;
+    color: #000;
     padding: 20px 0;
     text-align: center;
+    border-bottom: 2px solid #fff;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-header h1 {
+header h1.brillant {
     margin: 0;
+    font-size: 2.5em; /* Taille du texte (ajuste selon tes préférences) */
+    font-weight: bold; /* Texte en gras */
+    text-align: center; /* Centre le texte */
+    animation: briller 750ms infinite; /* Animation 'briller' qui dure 3 secondes et se répète à l'infini */
 }
 
+header p {
+    font-size: 3.5em; /* Augmente la taille du texte */
+    text-align: center; /* Assure que le texte est centré */
+    font-weight: bold; /* Met en gras le texte */
+    color: #000000; /* Donne une couleur verte au texte, tu peux changer cette couleur selon tes préférences */
+    margin-top: 10px; /* Ajoute un peu d'espace au-dessus du texte */
+    margin-bottom: 0; /* Enlève l'espace en bas du texte */
+    font-family: "Courier New", Courier, monospace; /* Change la police pour un effet de texte plus distinct */
+}
+
+/* SECTIONS */
 section {
     margin: 20px auto;
     padding: 20px;
     max-width: 800px;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgb(0, 255, 30);
+    text-align: center;
 }
 
-h2 {
-    color: #333;
-    border-bottom: 2px solid #f4f4f4;
+section h2 {
+    color: #33ff00;
+    border-bottom: 2px solid #000;
     padding-bottom: 5px;
+}
+
+section > div {
+    width: 90%;
+}
+
+/* Profile Section */
+.photo-profil {
+    text-align: center;
+}
+
+.photo-profil img {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px #777;
+    border-radius: 50%;
+    margin-top: -80px;
+}
+
+/* Presentation Section */
+.presentation {
+    border-bottom: 2px dashed #ccc;
+}
+
+.presentation a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 30px auto;
+    color: #fff;
+    background-color: #EA0;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-flex {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.contact-flex p:first-child {
+    flex: 0 0 40%;
+}
+
+.contact-flex p:last-child {
+    flex: 0 0 60%;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0;
+}
+
+.social img {
+    width: 800px;
+    height: 200px;
+}
+
+/* Experience & Formation Section */
+.exp {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.exp-info {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.exp-logo {
+    flex: 0 0 25%;
+    max-width: 100px;
+}
+
+.exp-info {
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+
+.exp img {
+    width: 100%;
+}
+
+.exp h3 {
+    font-size: 1.2em;
+}
+
+.exp h4 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* Skills Section */
+.h3gauche {
+    width: 90%;
+}
+
+.comp-pro {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+}
+
+.comp-pro p {
+    flex: 0 0 40%;
+}
+
+.conteneur-barre-pro {
+    flex: 0 0 60%;
+    border-radius: 5px;
+    background-color: grey;
+    border-bottom: 1px ridge grey;
+}
+
+.barre {
+    display: block;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.c60 {
+    width: 60%;
+    background-color: #8B8;
+}
+
+.c85 {
+    width: 85%;
+    background-color: #8B8;
+}
+
+.c90 {
+    width: 90%;
+    background-color: #4B8;
+}
+
+.c95 {
+    width: 95%;
+    background-color: #4B8;
+}
+
+.c100 {
+    width: 100%;
+    background-color: #4B8;
+    border-radius: 5px;
+}
+
+/* Interests Section */
+.interet {
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.interet img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #4f4f4f;
+    box-shadow: 0px 0px 15px #333;
+    border-top: 2px solid #fff;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* Media Queries */
+@media screen and (min-width: 980px) {
+    section {
+        width: 80%;
+        box-shadow: 0px 0px 10px #bbb;
+    }
+
+    header h1 {
+        width: 80%;
+    }
+
+    .presentation,
+    .contact {
+        flex: 0 0 45%;
+    }
+
+    .presentation {
+        border-bottom: none;
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-left: auto;
+    }
+
+    .exp-logo {
+        flex: 0 0 10%;
+    }
+
+    .exp-info,
+    .exp-desc {
+        flex: 0 0 85%;
+        margin-left: auto;
+    }
+
+    .interet {
+        flex: 0 1 25%;
+    }
 }
